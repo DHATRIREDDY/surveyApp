@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class QuestionnaireController extends Controller
 {
+    public function _construct()
+    {
+        $this->middleware('auth');
+    }
     public function create()
     {
         return view('questionnaire.create');
